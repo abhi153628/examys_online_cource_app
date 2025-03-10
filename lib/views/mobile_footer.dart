@@ -5,23 +5,20 @@ class ResponsiveFooterMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Check if we're on a small screen
     final isSmallScreen = MediaQuery.of(context).size.width < 600;
 
     return Container(
       width: double.infinity,
       color: const Color(0xFF333333),
       padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
-      child: isSmallScreen
-          ? _buildColumnLayout()
-          : _buildRowLayout(),
+      child: isSmallScreen ? _buildColumnLayout() : _buildRowLayout(),
     );
   }
 
   Widget _buildColumnLayout() {
     return Column(
       children: [
-        // OUR PRODUCTS Section
+        //! OUR PRODUCTS Section
         _buildSectionHeader('OUR PRODUCTS'),
         const SizedBox(height: 20),
         _buildMenuItem('Course'),
@@ -29,26 +26,25 @@ class ResponsiveFooterMenu extends StatelessWidget {
         _buildMenuItem('Test pass pro+'),
         _buildMenuItem('Examys AI'),
         _buildMenuItem('Doubt Clear'),
-        
+
         const SizedBox(height: 40),
-        
-        // COMPANY Section
+
+        //! COMPANY Section
         _buildSectionHeader('COMPANY'),
         const SizedBox(height: 20),
         _buildMenuItem('About us'),
         _buildMenuItem('Careers'),
         _buildMenuItem('Press'),
         _buildMenuItem('Contact Us'),
-        
+
         const SizedBox(height: 40),
-        
-        // LEGAL Section
+
+        //! LEGAL Section
         _buildSectionHeader('LEGAL'),
         const SizedBox(height: 20),
         _buildMenuItem('Terms & Conditions'),
         _buildMenuItem('Policies'),
-        
-        // Additional spacing at the bottom
+
         const SizedBox(height: 20),
       ],
     );

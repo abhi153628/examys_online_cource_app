@@ -6,10 +6,10 @@ class ExamysSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get screen width to determine layout
+    //! width to determine layout
     final screenWidth = MediaQuery.of(context).size.width;
     final isDesktop = screenWidth > 1000;
-    
+
     return Column(
       children: [
         _buildHeroSection(context, isDesktop: isDesktop),
@@ -18,6 +18,7 @@ class ExamysSection extends StatelessWidget {
     );
   }
 
+//! HeroSection
   Widget _buildHeroSection(BuildContext context, {required bool isDesktop}) {
     return Stack(
       clipBehavior: Clip.none,
@@ -26,18 +27,17 @@ class ExamysSection extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-           gradient: LinearGradient(
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-      colors: [
-        Color(0xFF818AED), // top left
-        Color(0xFFD1C2FB), // top right
-        Color(0xFF909BF1), // bottom right
-        Color(0xFFBCBCFC), // bottom left
-      ],
-      stops: [0.0, 0.3, 0.6, 1.0],
-    ),
-  
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0xFF818AED),
+                Color(0xFFD1C2FB),
+                Color(0xFF909BF1),
+                Color(0xFFBCBCFC),
+              ],
+              stops: [0.0, 0.3, 0.6, 1.0],
+            ),
           ),
           padding: EdgeInsets.symmetric(
             horizontal: isDesktop ? 64.0 : 24.0,
@@ -56,7 +56,7 @@ class ExamysSection extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                         Text(
+                        Text(
                           'Experience',
                           style: GoogleFonts.roboto(
                             fontSize: 48,
@@ -65,7 +65,7 @@ class ExamysSection extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 16),
-                         Text(
+                        Text(
                           'Examys',
                           style: GoogleFonts.roboto(
                             fontSize: 48,
@@ -74,7 +74,7 @@ class ExamysSection extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 32),
-                        // Google Play Button
+                        //! Google Play Button
                         Padding(
                           padding: const EdgeInsets.only(top: 10, left: 110),
                           child: Container(
@@ -135,16 +135,17 @@ class ExamysSection extends StatelessWidget {
         if (isDesktop)
           Positioned(
             right: isDesktop ? 100 : 24,
-            top: -50, // Negative value to make the image overlap from the top
+            top: -50,
             child: Image.asset(
               'asset/mobile-prototype.jpg',
-              height: 500, // Increased height to make the overlap more visible
+              height: 500,
             ),
           ),
       ],
     );
   }
 
+//! Build content Section
   Widget _buildContentSection(BuildContext context, {required bool isDesktop}) {
     return Container(
       width: double.infinity,
@@ -217,6 +218,7 @@ class ExamysSection extends StatelessWidget {
     );
   }
 
+//! Feature List
   List<Widget> _buildFeaturesList(List<String> features) {
     return features.map((feature) {
       return Padding(
@@ -247,6 +249,7 @@ class ExamysSection extends StatelessWidget {
     }).toList();
   }
 
+//! CourseTerminalSection
   Widget _buildCourseTerminalSection(BuildContext context, bool isDesktop) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -297,6 +300,7 @@ class ExamysSection extends StatelessWidget {
     );
   }
 
+//! TestSeriesSection
   Widget _buildTestSeriesSection(BuildContext context, bool isDesktop) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -329,6 +333,7 @@ class ExamysSection extends StatelessWidget {
     );
   }
 
+//! AISection
   Widget _buildAISection(BuildContext context, bool isDesktop) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -360,6 +365,7 @@ class ExamysSection extends StatelessWidget {
     );
   }
 
+// !dAISection
   Widget _buildExamDetailsSection(BuildContext context, bool isDesktop) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -393,6 +399,7 @@ class ExamysSection extends StatelessWidget {
     );
   }
 
+// !WebsiteLink
   Widget _buildWebsiteLink(String url) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8.0),
@@ -407,6 +414,7 @@ class ExamysSection extends StatelessWidget {
     );
   }
 
+// !CouponSection
   Widget _buildCouponSection(BuildContext context, bool isDesktop) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

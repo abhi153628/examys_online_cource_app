@@ -8,12 +8,10 @@ class ExamysAppPromo extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Gradient container with phone mockup
         Stack(
           clipBehavior: Clip.none,
           alignment: Alignment.center,
           children: [
-            // Gradient background
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -24,8 +22,8 @@ class ExamysAppPromo extends StatelessWidget {
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,
                     colors: [
-                      const Color(0xFF8C7BFF), // Light purple
-                      const Color(0xFFB3A0FF), // Lighter purple
+                      const Color(0xFF8C7BFF),
+                      const Color(0xFFB3A0FF),
                     ],
                   ),
                   borderRadius: BorderRadius.circular(16),
@@ -52,10 +50,10 @@ class ExamysAppPromo extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    // Google Play button
+                    //! Google Play button
                     Container(
-                      padding:
-                          const EdgeInsets.symmetric(vertical: 6, horizontal: 10),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 6, horizontal: 10),
                       width: 200,
                       decoration: BoxDecoration(
                         color: Colors.black,
@@ -99,7 +97,7 @@ class ExamysAppPromo extends StatelessWidget {
               ),
             ),
 
-            // Phone mockup positioned to overlap the container
+            // !Phone mockup positioned to overlap the container
             Positioned(
               right: 20,
               bottom: -50,
@@ -111,9 +109,9 @@ class ExamysAppPromo extends StatelessWidget {
           ],
         ),
 
-        // Website URL
+        //! Website URL
         const Padding(
-          padding: EdgeInsets.only(top: 80, bottom: 16,left: 20),
+          padding: EdgeInsets.only(top: 80, bottom: 16, left: 20),
           child: Text(
             'Examys.com',
             style: TextStyle(
@@ -124,7 +122,7 @@ class ExamysAppPromo extends StatelessWidget {
           ),
         ),
 
-        // Description text
+        // !Description text
         Padding(
           padding: const EdgeInsets.all(18.0),
           child: Text(
@@ -137,7 +135,7 @@ class ExamysAppPromo extends StatelessWidget {
           ),
         ),
 
-        // Longer paragraph
+        //! Longer paragraph
         Padding(
           padding: const EdgeInsets.all(18.0),
           child: Text(
@@ -150,7 +148,7 @@ class ExamysAppPromo extends StatelessWidget {
           ),
         ),
 
-        // Examys provides section
+        // !Examys provides section
         Padding(
           padding: const EdgeInsets.all(18.0),
           child: Text(
@@ -163,7 +161,7 @@ class ExamysAppPromo extends StatelessWidget {
           ),
         ),
 
-        // Bullet point
+        // !Bullet point
         Padding(
           padding: const EdgeInsets.all(18.0),
           child: Row(

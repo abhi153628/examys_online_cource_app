@@ -118,31 +118,29 @@ class TestSeriesGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        // Calculate items per row based on available width
-        int crossAxisCount = constraints.maxWidth > 1000 
-            ? 4 
-            : (constraints.maxWidth > 700 ? 2 : 1);
-        
-        return GridView.builder(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: crossAxisCount,
-            childAspectRatio: 0.75,
-            crossAxisSpacing: 20,
-            mainAxisSpacing: 20,
-          ),
-          itemCount: testSeries.length,
-          itemBuilder: (context, index) {
-            return TestSeriesCard(
-              testSeries: testSeries[index],
-            );
-          },
-        );
-      }
-    );
+    return LayoutBuilder(builder: (context, constraints) {
+      // Calculate items per row based on available width
+      int crossAxisCount = constraints.maxWidth > 1000
+          ? 4
+          : (constraints.maxWidth > 700 ? 2 : 1);
+
+      return GridView.builder(
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: crossAxisCount,
+          childAspectRatio: 0.75,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
+        ),
+        itemCount: testSeries.length,
+        itemBuilder: (context, index) {
+          return TestSeriesCard(
+            testSeries: testSeries[index],
+          );
+        },
+      );
+    });
   }
 }
 

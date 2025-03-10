@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 class ExamPlatform extends StatelessWidget {
@@ -16,10 +18,10 @@ class ExamPlatform extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 20),
-                  // Top Section - Test Series
+                  //! Top Section - Test Series
                   const TestSeriesSection(),
                   const SizedBox(height: 60),
-                  // Bottom Section - Current Affairs
+                  //! Bottom Section - Current Affairs
                   const CurrentAffairsSection(),
                 ],
               ),
@@ -37,7 +39,6 @@ class TestSeriesSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      // crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Padding(
           padding: const EdgeInsets.only(right: 600),
@@ -53,11 +54,11 @@ class TestSeriesSection extends StatelessWidget {
         LayoutBuilder(
           builder: (context, constraints) {
             if (constraints.maxWidth > 768) {
-              // Desktop Layout
+              //! Desktop Layout
               return Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Left Side - Features
+                  //! Left Side - Features
                   Expanded(
                     flex: 1,
                     child: Padding(
@@ -71,7 +72,8 @@ class TestSeriesSection extends StatelessWidget {
                                 icon: Icons.check_box_outlined,
                                 iconColor: Colors.indigo,
                                 bgColor: Colors.indigo.withOpacity(0.1),
-                                title: 'Updated Questions with latest\nexam pattern',
+                                title:
+                                    'Updated Questions with latest\nexam pattern',
                               ),
                               _buildFeatureItem(
                                 icon: Icons.translate,
@@ -87,7 +89,8 @@ class TestSeriesSection extends StatelessWidget {
                             children: [
                               _buildFeatureItem(
                                 icon: Icons.trending_up,
-                                iconColor: const Color.fromARGB(255, 192, 194, 200),
+                                iconColor:
+                                    const Color.fromARGB(255, 192, 194, 200),
                                 bgColor: Colors.pink.withOpacity(0.1),
                                 title: 'Mock, Prev. Year, Trend & Live\nTests',
                               ),
@@ -103,23 +106,22 @@ class TestSeriesSection extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Right Side - Illustration
+                  //! Right Side - Illustration
                   Expanded(
                     flex: 1,
                     child: Image.asset(
                       'asset/Screenshot_2025-03-10_000834-removebg-preview.png',
                       fit: BoxFit.contain,
                       height: 400,
-             
                     ),
                   ),
                 ],
               );
             } else {
-              // Mobile Layout
+              // !Mobile Layout
               return Column(
                 children: [
-                  // Features in 2x2 grid
+                  //! Features in 2x2 grid
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -166,15 +168,13 @@ class TestSeriesSection extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 40),
-                  // Illustration
-                  // _buildPlaceholderImage(),
                 ],
               );
             }
           },
         ),
         const SizedBox(height: 40),
-        // Unlock Pro Button
+        //! Unlock Pro Button
         ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
@@ -227,72 +227,9 @@ class TestSeriesSection extends StatelessWidget {
       ],
     );
   }
-
- 
-  Widget _buildPersonWithLaptop() {
-    return SizedBox(
-      width: 120,
-      height: 200,
-      child: Stack(
-        children: [
-          // Body
-          Positioned(
-            bottom: 0,
-            left: 35,
-            child: Container(
-              width: 50,
-              height: 100,
-              decoration: BoxDecoration(
-                color: Colors.indigo.shade300,
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(10),
-                  topRight: Radius.circular(10),
-                ),
-              ),
-            ),
-          ),
-          // Head
-          Positioned(
-            top: 40,
-            left: 40,
-            child: Container(
-              width: 40,
-              height: 50,
-              decoration: BoxDecoration(
-                color: Colors.black87,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Center(
-                child: Container(
-                  width: 25,
-                  height: 25,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFFBD3E1),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          // Laptop
-          Positioned(
-            top: 100,
-            left: 35,
-            child: Container(
-              width: 50,
-              height: 40,
-              decoration: BoxDecoration(
-                color: Colors.redAccent,
-                borderRadius: BorderRadius.circular(8),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
 }
 
+//! Current Affairs section
 class CurrentAffairsSection extends StatelessWidget {
   const CurrentAffairsSection({Key? key}) : super(key: key);
 
@@ -318,12 +255,14 @@ class CurrentAffairsSection extends StatelessWidget {
                 children: [
                   _buildAffairsCard(
                     title: 'Are current affairs for all exams same?',
-                    content: 'As we know, current affairs for banking and Insurance Exams are very different from current affairs for UPSC, SSC, railway, teaching, defence, state government jobs and other similar jobs.',
+                    content:
+                        'As we know, current affairs for banking and Insurance Exams are very different from current affairs for UPSC, SSC, railway, teaching, defence, state government jobs and other similar jobs.',
                   ),
                   const SizedBox(width: 20),
                   _buildAffairsCard(
                     title: 'Exam-wise Current Affairs',
-                    content: 'Do you need exam specific current affairs to achieve your goal?\nBe focus & get exam-wise current affairs with Examys Current Affairs',
+                    content:
+                        'Do you need exam specific current affairs to achieve your goal?\nBe focus & get exam-wise current affairs with Examys Current Affairs',
                   ),
                   const SizedBox(width: 20),
                   _buildAffairsCard(
@@ -338,12 +277,14 @@ class CurrentAffairsSection extends StatelessWidget {
                 children: [
                   _buildAffairsCard(
                     title: 'Are current affairs for all exams same?',
-                    content: 'As we know, current affairs for banking and Insurance Exams are very different from current affairs for UPSC, SSC, railway, teaching, defence, state government jobs and other similar jobs.',
+                    content:
+                        'As we know, current affairs for banking and Insurance Exams are very different from current affairs for UPSC, SSC, railway, teaching, defence, state government jobs and other similar jobs.',
                   ),
                   const SizedBox(height: 20),
                   _buildAffairsCard(
                     title: 'Exam-wise Current Affairs',
-                    content: 'Do you need exam specific current affairs to achieve your goal?\nBe focus & get exam-wise current affairs with Examys Current Affairs',
+                    content:
+                        'Do you need exam specific current affairs to achieve your goal?\nBe focus & get exam-wise current affairs with Examys Current Affairs',
                   ),
                   const SizedBox(height: 20),
                   _buildAffairsCard(

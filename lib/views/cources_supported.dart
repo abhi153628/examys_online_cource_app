@@ -26,21 +26,25 @@ class CoursesSupported extends StatelessWidget {
                     iconData: Icons.timeline,
                     title: 'Course Journey',
                     subtitle: 'Insights that can make a drastic your result.',
-                    description: 'Every course has a \'course journey\' section to accelerate your preparation and, ultimately, help you crack the exam.',
+                    description:
+                        'Every course has a \'course journey\' section to accelerate your preparation and, ultimately, help you crack the exam.',
                   ),
                   const SizedBox(height: 16),
                   SupportCard(
                     iconData: Icons.auto_awesome,
                     title: 'Examys AI',
                     subtitle: 'Analyzing trend that boosts your confidence.',
-                    description: 'Every course has a \'Trend analysis\' section which is powered by examys ai to know the exam pattern.',
+                    description:
+                        'Every course has a \'Trend analysis\' section which is powered by examys ai to know the exam pattern.',
                   ),
                   const SizedBox(height: 16),
                   SupportCard(
                     iconData: Icons.people,
                     title: 'Course Design and Team',
-                    subtitle: 'Learning path that connects and team that inspires.',
-                    description: 'Every course has a \'course design & team\' section to know about the team & faculties and their inspiring story.',
+                    subtitle:
+                        'Learning path that connects and team that inspires.',
+                    description:
+                        'Every course has a \'course design & team\' section to know about the team & faculties and their inspiring story.',
                   ),
                 ],
               );
@@ -53,7 +57,8 @@ class CoursesSupported extends StatelessWidget {
                       iconData: Icons.timeline,
                       title: 'Course Journey',
                       subtitle: 'Insights that can make a drastic your result.',
-                      description: 'Every course has a \'course journey\' section to accelerate your preparation and, ultimately, help you crack the exam.',
+                      description:
+                          'Every course has a \'course journey\' section to accelerate your preparation and, ultimately, help you crack the exam.',
                     ),
                   ),
                   const SizedBox(width: 20),
@@ -62,7 +67,8 @@ class CoursesSupported extends StatelessWidget {
                       iconData: Icons.auto_awesome,
                       title: 'Examys AI',
                       subtitle: 'Analyzing trend that boosts your confidence.',
-                      description: 'Every course has a \'Trend analysis\' section which is powered by examys ai to know the exam pattern.',
+                      description:
+                          'Every course has a \'Trend analysis\' section which is powered by examys ai to know the exam pattern.',
                     ),
                   ),
                   const SizedBox(width: 20),
@@ -70,8 +76,10 @@ class CoursesSupported extends StatelessWidget {
                     child: SupportCard(
                       iconData: Icons.people,
                       title: 'Course Design and Team',
-                      subtitle: 'Learning path that connects and team that inspires.',
-                      description: 'Every course has a \'course design & team\' section to know about the team & faculties and their inspiring story.',
+                      subtitle:
+                          'Learning path that connects and team that inspires.',
+                      description:
+                          'Every course has a \'course design & team\' section to know about the team & faculties and their inspiring story.',
                     ),
                   ),
                 ],
@@ -239,10 +247,7 @@ class MockTestEdgeSection extends StatelessWidget {
           child: const Text(
             'Examys Test Pass pro+',
             style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              color: Colors.white
-            ),
+                fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
       ],
@@ -256,17 +261,20 @@ class FeatureCardsSection extends StatelessWidget {
   final List<FeatureCard> features = [
     FeatureCard(
       title: 'Personalised Recommendation',
-      description: 'It traces strong and weak areas of your Test Journey & recommends for improvement.',
+      description:
+          'It traces strong and weak areas of your Test Journey & recommends for improvement.',
       imagePath: 'asset/1st-removebg-preview.png',
     ),
     FeatureCard(
       title: 'Comprehensive approach',
-      description: 'Get mock tests (chapter-wise, sectional & full mock, mini mock, level-up mock, and many more), previous-year tests, trend tests, and live test series to maximize your score with an all-round approach.',
+      description:
+          'Get mock tests (chapter-wise, sectional & full mock, mini mock, level-up mock, and many more), previous-year tests, trend tests, and live test series to maximize your score with an all-round approach.',
       imagePath: 'asset/ca-removebg-preview.png',
     ),
     FeatureCard(
       title: 'Competitive Index',
-      description: 'Gauge your strength after test so that You will have an edge over your competitors.',
+      description:
+          'Gauge your strength after test so that You will have an edge over your competitors.',
       imagePath: 'asset/ci-removebg-preview.png',
     ),
   ];

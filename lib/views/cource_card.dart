@@ -111,7 +111,7 @@ class _CourseListingPageState extends State<CourseListingPage> {
           ...course['features'].map<Widget>((feature) {
             String featureText = feature;
             Color? featureHighlightColor;
-            
+
             if (feature.contains('Examys AI')) {
               final parts = feature.split('Examys AI');
               featureText = parts[0];
@@ -121,7 +121,7 @@ class _CourseListingPageState extends State<CourseListingPage> {
               featureText = parts[0];
               featureHighlightColor = Colors.green[400];
             }
-            
+
             return Padding(
               padding: const EdgeInsets.only(bottom: 8),
               child: Row(
@@ -134,17 +134,20 @@ class _CourseListingPageState extends State<CourseListingPage> {
                         children: [
                           TextSpan(
                             text: featureText,
-                            style: const TextStyle(fontSize: 16, color: Colors.black),
+                            style: const TextStyle(
+                                fontSize: 16, color: Colors.black),
                           ),
                           if (feature.contains('Examys AI'))
                             TextSpan(
                               text: 'Examys AI',
-                              style: TextStyle(fontSize: 16, color: featureHighlightColor),
+                              style: TextStyle(
+                                  fontSize: 16, color: featureHighlightColor),
                             ),
                           if (feature.contains('Doubt Clear'))
                             TextSpan(
                               text: 'Doubt Clear',
-                              style: TextStyle(fontSize: 16, color: featureHighlightColor),
+                              style: TextStyle(
+                                  fontSize: 16, color: featureHighlightColor),
                             ),
                         ],
                       ),
