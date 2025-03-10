@@ -16,11 +16,30 @@ Examys is an online education platform that provides structured courses, video c
 
 
 
-📽️ Demo Videos
+📽️ Demo images
 📱 Mobile App View
+![Home Screen](asset/ph1.jpg)
+![Home Screen](asset/ph2.jpg)
+![Home Screen](asset/ph3.jpg)
+![Home Screen](asset/ph4.jpg)
+![Home Screen](asset/ph5.jpg)
+
 
 
 💻 Web App View
+
+![Home Screen](asset/d1.png)
+![Home Screen](asset/d3.png)
+![Home Screen](asset/d4.png)
+![Home Screen](asset/d5.png)
+![Home Screen](asset/d6.png)
+![Home Screen](asset/d7.png)
+![Home Screen](asset/d8.png)
+![Home Screen](asset/d9.png)
+![Home Screen](asset/d10.png)
+![Home Screen](asset/d11.png)
+
+
 
 
 📌 Features
